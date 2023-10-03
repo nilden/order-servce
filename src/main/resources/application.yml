@@ -44,6 +44,8 @@ spring:
         dispatchOrder-in-0:
           destination: order-dispatched # The actual name at the broker that the binder binds to (the exchange in RabbitMQ)
           group: {spring.application.name} # The consumer group interested in the destination (the same as the application name)
+        acceptOrder-out-0:
+          destination: order-accepted
       rabbit: # RabbitMQ-specific configuration for the Spring Cloud Stream bindings
         bindings:
           acceptOrder-out-0:
